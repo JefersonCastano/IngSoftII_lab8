@@ -5,6 +5,7 @@ import co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.infra.JsonErr
 import co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.model.Customer;
 import co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.services.CustomerService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,10 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 */
 
 @RestController
-@RequestMapping("/client") //URL para el recurso cliente
+@RequestMapping("/clients") //URL para el recurso cliente
 public class ClientController {
     
-    private CustomerService service = new CustomerService(new CustomerRepositoryImplArrays());
+    @Autowired
+    private CustomerService service;
     
     /**
     * @brief Obtiene la informacion de todos los clientes registrados

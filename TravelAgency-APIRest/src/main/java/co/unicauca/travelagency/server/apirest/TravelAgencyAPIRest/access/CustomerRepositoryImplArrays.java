@@ -3,6 +3,7 @@ package co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.access;
 import co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.model.Customer;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
 /**
  * Implementación de ICustomerRepository. Utiliza arreglos en memoria
@@ -10,6 +11,7 @@ import java.util.List;
  * @author Jeferson Castano Ossa <jcastanoossa@unicauca.edu.co>
  * @author David Santiago Giron Munoz <davidgiron@unicauca.edu.co>
  */
+@Repository
 public final class CustomerRepositoryImplArrays implements ICustomerRepository {
 
     /**

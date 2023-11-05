@@ -6,6 +6,8 @@ import co.unicauca.travelagency.server.apirest.TravelAgencyAPIRest.infra.JsonErr
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @brief Servicio de clientes. Da acceso a la lógica de negocio
@@ -13,11 +15,13 @@ import java.util.List;
  * @author Jeferson Castano Ossa <jcastanoossa@unicauca.edu.co>
  * @author David Santiago Giron Munoz <davidgiron@unicauca.edu.co>
 */
+@Service
 public class CustomerService {
 
     /**
      * Repositorio de clientes
      */
+    @Autowired
     ICustomerRepository repo;
 
     /**
